@@ -1,7 +1,8 @@
 {
   "name": "pokedash",
   "version": "1.0.0",
-  "description": "Dashboard for PokemonGo",
+  "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "build": "webpack --progress --colors --env develop",
@@ -9,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
