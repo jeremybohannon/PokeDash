@@ -1,27 +1,49 @@
-const path = require('path');
-const srcPath = path.join(__dirname, 'src');
-const buildPath = path.join(__dirname, 'dist');
+const webpack = require('webpack')
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const srcPath = path.join(__dirname, 'src')
+const buildPath = path.join(__dirname, 'dist')
+
 module.exports = {
-  context: srcPath,
-  entry: path.join(srcPath, 'js', 'index.js'),
+  devtool: 'source-map',
+  entry: {
+    app: path.join(srcPath, 'index.js')
+  },
   output: {
-      path: buildPath,
-      filename: "bundle.js"
+    path: buildPath,
+    filename: "[name].[hash].bundle.js",
+    sourceMapFilename: '[name].[hash].bundle.map'
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: 'PokeDash',
-    filename: 'index.html',
-    template: 'index.html'
-  })],
   module: {
-      loaders: [
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: [
           {
-            test: /\.jsx?$/,
-            exclude: /(node_modules)/,
-            loaders: ["babel-loader"],
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                'react',
+                ['es2015', { "modules": false } ]
+              ]
+            }
           }
-      ]
+        ]
+      },
+    ]
   },
-};
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendors',
+      fileName: 'vendors.[hash].js',
+      minChunks: Infinity
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.join(srcPath, 'index.html'),
+      inject: 'body'
+    })
+  ]
+}
