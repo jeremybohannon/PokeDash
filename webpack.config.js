@@ -2,8 +2,8 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const srcPath = path.join(__dirname, 'src')
-const buildPath = path.join(__dirname, 'dist')
+const srcPath = path.join(__dirname, 'webapp/src')
+const buildPath = path.join(__dirname, 'webapp/dist')
 
 module.exports = {
   devtool: 'source-map',
