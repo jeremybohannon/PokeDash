@@ -5,8 +5,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "build": "webpack --progress --colors --env develop",
     "dist": "webpack -p --env production",
+    "devServer": "node devServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -22,6 +24,7 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   }
