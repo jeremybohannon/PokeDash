@@ -8,7 +8,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/data', function (req, res) {
-  res.sendFile(__dirname + '/data/states-data.JSON')
+  res.sendFile(__dirname + '/mock/states-data.json')
 })
 
 app.listen(3000, function () {
