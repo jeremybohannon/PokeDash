@@ -8,6 +8,7 @@
     "start": "webpack-dev-server",
     "build": "webpack --progress --colors --env develop",
     "dist": "webpack -p --env production",
+    "devServer": "node devServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
