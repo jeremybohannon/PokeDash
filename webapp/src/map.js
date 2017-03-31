@@ -105,6 +105,8 @@ export function createMap(anchorElem, mapData, latlong, zoomLevel) {
     // TODO
     //Fix layer order persistence
     L.control.layers(baseMaps, overlayMaps).addTo(map)
+
+    return L;
 }
 
 function scale(minimum, maximum, scaleFactor=0.03){
