@@ -15,10 +15,10 @@ export default class Map extends Component {
     const zoomLevel = 4
 
     fetch('http://localhost:3000/data', {
-    }).then((response)=>{
-       response.json().then((json) =>{
-          createMap(this.mapDiv, json.features, [lat,long], zoomLevel)
-      });
+    })
+    .then((response) => response.json())
+    .then((data) => {
+          createMap(this.mapDiv, data.features, [lat,long], zoomLevel)
     }).catch((response)=>{
       console.log(response)
       return {};
