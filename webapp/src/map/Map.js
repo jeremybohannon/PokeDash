@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { createMap } from './createMap.js';
+
 export default class Map extends Component {
 
   render() {
     return (
-      <div ref={(map) => {this.mapDiv = map;}} style={{width: "100%" ,height: "100%"}}/>
+      <div ref={(map) => {this.mapDiv = map;}} className='map'/>
     );
   }
 
@@ -18,7 +19,7 @@ export default class Map extends Component {
     })
     .then((response) => response.json())
     .then((data) => {
-          createMap(this.mapDiv, data.features, [lat,long], zoomLevel)
+      createMap(this.mapDiv, data.features, [lat,long], zoomLevel)
     }).catch((response)=>{
       console.log(response)
       return {};
