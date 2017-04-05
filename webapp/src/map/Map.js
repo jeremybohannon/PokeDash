@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { createMap } from './../map.js';
-
+import { createMap } from './createMap.js';
 export default class Map extends Component {
 
   render() {
     return (
-      <div ref='map' style={{width: "100%" ,height: "100%"}}/>
+      <div ref={(map) => {this.mapDiv = map;}} style={{width: "100%" ,height: "100%"}}/>
     );
   }
 
@@ -16,10 +15,9 @@ export default class Map extends Component {
     const zoomLevel = 4
 
     fetch('http://localhost:3000/data', {
-      method: 'get'
     }).then((response)=>{
        response.json().then((json) =>{
-          createMap(this.refs.map, json.features, [lat,long], zoomLevel)
+          createMap(this.mapDiv, json.features, [lat,long], zoomLevel)
       });
     }).catch((response)=>{
       console.log(response)
