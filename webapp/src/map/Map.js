@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createMap } from './createMap.js';
+import './Map.css';
 
 export default class Map extends Component {
 
@@ -21,7 +22,7 @@ export default class Map extends Component {
     .then((data) => {
       createMap(this.mapDiv, data.features, [lat,long], zoomLevel)
     }).catch((response)=>{
-      console.log(response)
+      console.error(response)
       return {};
     })
   }
