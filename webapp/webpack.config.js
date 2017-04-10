@@ -8,7 +8,8 @@ const buildPath = path.join(__dirname, '/dist')
 module.exports = {
   devtool: 'source-map',
   entry: {
-    app: path.join(srcPath, 'index.js')
+    app: path.join(srcPath, 'index.js'),
+    vendors: [ 'react', 'react-dom', 'leaflet' ]
   },
   output: {
     path: buildPath,
