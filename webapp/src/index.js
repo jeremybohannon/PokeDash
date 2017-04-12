@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './components/HelloWorld.js';
+import Map from './map/Map.js';
+import 'leaflet/dist/leaflet.css';
+import css from './stylesheet.css';
 
 ReactDOM.render(
-  <HelloWorld />,
+  <Map/>,
   document.getElementById('app')
 );

@@ -6,17 +6,5 @@
 </head>
 <body>
   <div id="app"></div>
-  <script>
-    fetch('http://localhost:3000/data', {
-      method: 'get'
-    }).then((response)=>{
-       response.json().then((json) =>{
-          console.log(json);
-      });
-    }).catch((response)=>{
-      console.log(response)
-      return {};
-    })
-  </script>
 </body>
 </html>

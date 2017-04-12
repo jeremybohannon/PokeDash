@@ -8,7 +8,8 @@ const buildPath = path.join(__dirname, '/dist')
 module.exports = {
   devtool: 'source-map',
   entry: {
-    app: path.join(srcPath, 'index.js')
+    app: path.join(srcPath, 'index.js'),
+    vendors: [ 'react', 'react-dom', 'leaflet' ]
   },
   output: {
     path: buildPath,
@@ -31,6 +32,26 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.css$/,
+          use: [
+            { loader: 'style-loader' },
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              }
+            }
+          ]
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
       },
     ]
   },
