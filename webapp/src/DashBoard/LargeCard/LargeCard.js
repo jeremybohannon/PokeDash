@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './LargeCard.css';
+
 export default class DashBoard extends Component {
 
   render(){
       return (
         <div className="LargeCard">
           <div className="cardTitle">
-            <h2>Title</h2>
+            <h2>{this.props.title}</h2>
           </div>
           <div className="cardContent">
-            test
+            <this.props.content/>
           </div>
         </div>
       )
