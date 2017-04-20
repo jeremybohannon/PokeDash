@@ -8,10 +8,12 @@ export default class MenuOption extends Component {
 
       if (this.props.name === "Home") {
         icon = 'fa-home'
+      } else if(this.props.name === "Data"){
+        icon = 'fa-table'
       }
-      
+
       return (
-        <a className="sideNavOption">
+        <a href="#" className="sideNavOption">
           <i className={`fa ${icon}`} aria-hidden="true"></i>
           <span>{this.props.name}</span>
           <span className="fa fa-chevron-down" aria-hidden="true"></span>

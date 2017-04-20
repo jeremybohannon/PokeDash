@@ -20,6 +20,7 @@ export default class SideNav extends Component {
           </div>
           <div className="sideMenu">
             <MenuOption name="Home" />
+            <MenuOption name="Data" />
           </div>
         </div>
       )
