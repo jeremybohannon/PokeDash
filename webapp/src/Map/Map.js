@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
-import { createMap } from './createMap.js';
-import './Map.css';
+import React, { Component } from 'react'
+import { createMap } from './createMap.js'
+import './Map.css'
 
 export default class Map extends Component {
+  constructor(props) {
+    super(props)
+
+    this.mapDiv = null;
+  }
 
   render() {
     return (

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import './DashBoard.css';
-import LargeCard from './LargeCard/LargeCard.js';
-import Map from '../Map/Map.js';
+import React, { Component } from 'react'
+import './DashBoard.css'
+import LargeCard from './LargeCard/LargeCard.js'
+import Map from '../Map/Map.js'
 
 export default class DashBoard extends Component {
 

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './LargeCard.css';
+import React, { Component } from 'react'
+import './LargeCard.css'
 
 export default class LargeCard extends Component {
 
