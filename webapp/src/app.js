@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import DashBoard from './DashBoard/DashBoard.js';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import DashBoard from './DashBoard/DashBoard.js'
 import SideNav from './SideNav/SideNav.js'
-import 'leaflet/dist/leaflet.css';
-import css from './stylesheet.css';
+import './stylesheet.css'
 
 export default class App extends Component {
   render() {

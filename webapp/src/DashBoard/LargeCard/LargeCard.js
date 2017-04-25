@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './LargeCard.css';
 
-export default class DashBoard extends Component {
+export default class LargeCard extends Component {
 
   render(){
       return (
@@ -10,7 +10,7 @@ export default class DashBoard extends Component {
             <h2>{this.props.title}</h2>
           </div>
           <div className="cardContent">
-            <this.props.content/>
+            {this.props.children}
           </div>
         </div>
       )

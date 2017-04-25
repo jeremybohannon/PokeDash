@@ -8,7 +8,9 @@ export default class DashBoard extends Component {
   render(){
       return (
         <div className="dashBoard">
-          <LargeCard title="Map" content={Map}/>
+          <LargeCard title="Map">
+            <Map/>
+          </LargeCard>
         </div>
       )
     }

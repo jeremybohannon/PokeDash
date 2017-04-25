@@ -16,7 +16,7 @@ export default class MenuOption extends Component {
         <a href="#" className="sideNavOption">
           <i className={`fa ${icon}`} aria-hidden="true"></i>
           <span>{this.props.name}</span>
-          <span className="fa fa-chevron-down" aria-hidden="true"></span>
+          <span className=" arrowDown fa fa-chevron-down" aria-hidden="true"></span>
         </a>
       )
   }
